@@ -1,0 +1,36 @@
+aside.aside
+  .aside__wrap
+    a(href="#").aside__logo
+      img(src="img/aside-logo.png", alt="logo", class="aside__logo-img")
+      span.aside__logo-text BECO
+    nav.aside__nav
+      ul.aside__nav-list
+        li.aside__nav-item
+          a(href='catalog.html' class='aside__nav-link')
+            //- img(src="img/nav/catalog.svg", alt="Каталог")
+            include ../../img/nav/catalog.svg
+            span Каталог
+        li.aside__nav-item
+          a(href='health.html' class='aside__nav-link')
+            //- img(src="img/nav/health.svg", alt='Здоровье')
+            include ../../img/nav/health.svg
+            span Здоровье
+        li.aside__nav-item
+          a(href='beauty.html' class='aside__nav-link')
+            //- img(src="img/nav/beauty.svg", alt='Красота')
+            include ../../img/nav/beauty.svg
+            span Красота
+        li.aside__nav-item
+          a(href='enjoy.html' class='aside__nav-link')
+            //- img(src="img/nav/enjoy.svg", alt='Развлечения')
+            include ../../img/nav/enjoy.svg
+            span Развлечения
+        li.aside__nav-item
+          a(href='car.html' class='aside__nav-link')
+            //- img(src="img/nav/car.svg", alt='Авто')
+            include ../../img/nav/car.svg
+            span Авто
+  .aside__humb
+    span.aside__humb-item.aside__humb-item--first
+    span.aside__humb-item.aside__humb-item--second
+    span.aside__humb-item.aside__humb-item--third

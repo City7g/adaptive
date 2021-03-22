@@ -1,0 +1,24 @@
+extends layout/main
+block variables
+  - var pageTitle = 'Home'
+  - var productList = [{title: 'Пробка на мира', description: 'Вечер для двоих', value: '-50%', type: 'СКИДКА', img: 'vine.png'},{title: 'Кино и немцы', description: 'Бесплатный бокал пива', value: 'ВАРВАР', type: 'ПРОМОКОД', img: 'varvar.png'},{title: 'Valery cakes', description: 'Торт', value: '30%', type: 'Cкидка', img: 'cake.png'},{title: 'Sushi sell', description: 'Набор “Праздник”', value: '45%', type: 'Cкидка', img: 'cake.png'},{title: 'Mangosteen', description: 'Фрукт в подарок', value: 'J130', type: 'Купон', img: 'fruit.png'},{title: 'Теленок табака', description: 'Стейк “Мачете”', value: '20%', type: 'Cкидка', img: 'calf.png'},{title: 'Fire food', description: 'Вторая шаурма в подарок', value: 'Огонь', type: 'Ппромокод', img: 'shawarma.png'},{title: 'Aroma cremeria', description: 'Джелато “Пармезан”', value: '20%', type: 'Cкидка', img: 'ice-cream.png'},{title: 'Пробка на мира', description: 'Вечер для двоих', value: 'J130', type: 'Купон', img: 'vine.png'},{title: 'Кино и немцы', description: 'Бесплатный бокал пива', value: 'ВАРВАР', type: 'ПРОМОКОД', img: 'varvar.png'},{title: 'Valery cakes', description: 'Торт', value: '30%', type: 'Cкидка', img: 'cake.png'},{title: 'Sushi sell', description: 'Набор “Праздник”', value: '45%', type: 'Cкидка', img: 'cake.png'}]
+
+
+block content
+  .title-search 
+    h1.title Развлечения
+    input(type="text" placeholder="Какой магазин вам нужен?").input
+  .products
+    each product in productList
+      .products__item
+        .products__item-content
+          .products__item--substrate
+          img(src="img/product/" + product.img, alt="", class="products__item-img")
+
+          h3.products__item-title= product.title
+          h4.products__item-description= product.description
+
+          p.products__item-value= product.value
+          p.products__item-type= product.type
+
+  
